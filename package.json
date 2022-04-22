@@ -1,0 +1,20 @@
+{
+  "name": "intro-nodejs-aceleradora",
+  "version": "1.0.0",
+  "description": "introducao ao nodejs para turma 21",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "aula",
+    "aceleradora"
+  ],
+  "author": "Turma 21",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
