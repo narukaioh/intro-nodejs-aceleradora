@@ -2,27 +2,36 @@ const express = require("express")
 const app = express()
 const port = 3000
 
-// GET, POST, PUT, DELETE
+const pokemons = [
+    {
+        name: "pikachu",
+        type: "eletric"
+    },
+    {
+        name: "charmander",
+        type: "fire"
+    },
+    {
+        name: "squirtle",
+        type: "water"
+    },
+    {
+        name: "bulbasaur",
+        type: "plant"
+    }
+]
 
-function helloWorld(request, response) {
-    return response.send("Olá mundo!")
+function listPokemons(request, response) {
+    return response.send(pokemons)
 }
 
-function soma(request, response) {
-    const n1 = request.params.pokemon
-    const n2 = request.params.numero2
-
-    const resultado = parseInt(n1) + parseInt(n2)
-    return response.send(`A soma dos numeros foi: ${resultado}`)
+function getPokemonByType(request, response) {
+    return response.send("implemente a função que retorna o NOME do pokemon por tipo")
 }
 
-app.get("/", helloWorld)
+app.get("/pokemon", listPokemons)
 
-app.get("/soma/:pokemon/:numero2", soma)
-
-app.post("/produto", (request, response) => {
-    return response.send("produto 1")
-})
+app.get("/pokemon/:type", getPokemonByType)
 
 app.listen(port, () => {
     console.log("http://localhost:3000")
