@@ -8,6 +8,10 @@ const pokemons = [
         type: "eletric"
     },
     {
+        name: "jolteon",
+        type: "eletric"
+    },
+    {
         name: "charmander",
         type: "fire"
     },
@@ -26,12 +30,14 @@ function listPokemons(request, response) {
 }
 
 function getPokemonByType(request, response) {
-    return response.send("implemente a função que retorna o NOME do pokemon por tipo")
+    const { type } = request.params
+    const pokemon = pokemons.filter(pokemon => pokemon.type === type)
+    return response.send(pokemon)
 }
 
 app.get("/pokemon", listPokemons)
-
 app.get("/pokemon/:type", getPokemonByType)
+
 
 app.listen(port, () => {
     console.log("http://localhost:3000")

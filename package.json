@@ -4,7 +4,9 @@
   "description": "introducao ao nodejs para turma 21",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "aula01": "nodemon aula-get-exemplo.js",
+    "aula02": "nodemon aula-post-exemplo.js"
   },
   "keywords": [
     "nodejs",
