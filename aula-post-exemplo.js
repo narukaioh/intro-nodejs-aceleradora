@@ -19,5 +19,6 @@ app.post("/produto", (request, response) => {
 })
 
 app.listen(port, () => {
-    console.log("Está rodando aula 02 em:\n\nhttp://localhost:3000")
+    console.log("Está rodando aula 02 em:")
+    console.log("http://localhost:3000")
 })
